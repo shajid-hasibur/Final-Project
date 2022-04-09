@@ -8,9 +8,10 @@
 body{
   margin: 0;
   padding: 0;
-  background: rgb(245, 192, 124);
   height: 100vh;
   overflow: hidden;
+  background-color: #ffecb1;
+  
 }
 .center{
   position: absolute;
@@ -169,4 +170,6 @@ input[type="submit"]:hover{
   padding-left: calc(var(--bs-gutter-x) * .5);
   margin-top: var(--bs-gutter-y);
 }
+
+
 

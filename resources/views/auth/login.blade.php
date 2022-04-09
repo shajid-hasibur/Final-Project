@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-md-4 col-md-offset-4" style="margin-top: 150px;">
           <h4>Admin Login</h4>
-          <form action="{{ route('admin.checkin') }}" method="POST">
+          <form action="{{ route('admin.checkin') }}" method="post">
             @if (Session::has('success'))
             <div class="alert alert-success">{{ Session::get('success') }}</div>  
             @endif

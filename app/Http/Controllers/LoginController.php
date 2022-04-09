@@ -8,17 +8,20 @@ use App\Models\actor;
 
 class LoginController extends Controller
 {
-   public function login(){
-       return view('auth.login');
-   }
+
    public function checkIn(Request $req)
     {
         $userInfo=$req->except('_token');
+        //dd($userInfo);
 
         if(Auth::attempt($userInfo)){
-            return redirect()->route('farmer-list')->with('message','Login successful.');
+
+          return redirect('/farmer-list');
+
+          // return redirect()->route('farmer-list')->with('message','Login successful.');
         }
-        return redirect()->back()->with('error','Invalid user credentials');
+        
+         return redirect()->back()->with('error','Invalid user credentials');
 
     }
     
