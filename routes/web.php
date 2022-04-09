@@ -5,6 +5,7 @@ use App\Http\Controllers\FetchDataController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AddFarmerController;
+use App\Http\Controllers\UpdateDataController;
 use App\Models\add_farmer;
 
 /*
@@ -66,7 +67,11 @@ Route::get('/farmer-list',[FetchDataController::class,'index'])->name('farmers')
 
 Route::get('delete-records',[DeleteController::class,'index']);
 
-Route::get('delete/{id_no}',[DeleteController::class,'destroy'])->name('delete.farmer');
+Route::get('delete/{id}',[DeleteController::class,'destroy'])->name('delete.farmer');
+
+Route::get('edit/{id}',[UpdateDataController::class,'showData'])->name('update.farmer');
+
+Route::post('edit/',[UpdateDataController::class,'update'])->name('update');
 
 Route::post('login-user',[LoginController::class,'login'])->name('login-user');
 

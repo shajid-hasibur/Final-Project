@@ -41,7 +41,7 @@
                   <td>{{ $user->farmers_account }}</td>
                   <td>{{ $user->farmers_phone }}</td>
                   <td>
-                      <a class="table-btn" href="#">Edit</a>
+                      <a class="table-btn" href="{{ route('update.farmer',$user->id) }}">Edit</a>
                       <a class="table-btn1" href="{{ route('delete.farmer',$user->id)}}">Delete</a>
                   </td>
                 </tr>
