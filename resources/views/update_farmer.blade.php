@@ -13,14 +13,14 @@
         <div class="header"><h1>Milk Collection & Distribution System</h1></div>
         <div class="nav-bar">
           
-            <a class="nav-btn" href="home">Home</a>
-            <a class="nav-btn" href="farmer-list">Farmers</a>
-            <a class="nav-btn" href="#">Employees</a>
-            <a class="nav-btn" href="#">Deliveries</a>
-            <a class="nav-btn" href="#">Payments</a>
-            <a class="nav-btn" href="#">Reports</a>
-            <a class="nav-btn" href="#">Shajid</a>
-            <a class="nav-btn" href="#">Settings</a>
+            <a class="nav-btn" href="{{ url('/home') }}">Home</a>
+            <a class="nav-btn" href="{{ url('/farmer-list') }}">Farmers</a>
+            <a class="nav-btn" href="{{ url('/employees') }}">Employees</a>
+            <a class="nav-btn" href="#">Collection</a>
+            <a class="nav-btn" href="{{ url('/delivery') }}">Delivery</a>
+            <a class="nav-btn" href="#">Payment</a>
+            <a class="nav-btn" href="#">Report</a>
+            {{-- <a class="nav-btn" href="#">Settings</a> --}}
         </div>
         <div class="reg-form">
             <div class="title">Update Farmer</div>

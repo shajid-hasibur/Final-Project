@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farmer list</title>
+    <title>Delivery</title>
     <link rel="stylesheet" href="{{ asset('css/farmer-list.css') }}">
 </head>
 <body>
@@ -26,34 +26,34 @@
         </div>
         <div class="content">
             <table class="table-content">
-                <h1 class="table-name">Farmer List</h1>
+                <h1 class="table-name">Delivery</h1>
                 <tr>
-                  <th>Serial No:</th>
-                  <th>ID No:</th>
-                  <th>Name</th>
-                  <th>Locality</th>
-                  <th>Account No:</th>
-                  <th>Phone No:</th>
+                  <th>Company Name</th>
+                  <th>Company Id</th>
+                  <th>Address</th>
+                  <th>Milk Amount</th>
+                  <th>Price</th>
+                  <th>Status</th>
                   <th>Action</th>
                 </tr>
                 @foreach ($users as $user)
                 <tr>
-                  <td>{{ $user->serial_no }}</td>
+                  <td>{{ $user->company_name }}</td>
                   <td>{{ $user->id }}</td>
-                  <td>{{ $user->name }}</td>
-                  <td>{{ $user->locality }}</td>
-                  <td>{{ $user->farmers_account }}</td>
-                  <td>{{ $user->farmers_phone }}</td>
+                  <td>{{ $user->address }}</td>
+                  <td>{{ $user->milk_amount }}</td>
+                  <td>{{ $user->price }}</td>
+                  <td>{{ $user->status }}</td>
                   <td>
-                      <a class="table-btn" href="{{ route('update.farmer',$user->id) }}">Update</a>
-                      <a class="table-btn1" href="{{ route('delete.farmer',$user->id)}}">Delete</a>
+                      <a class="table-btn" href="#">Update</a>
+                      <a class="table-btn1" href="#">Delete</a>
                   </td>
                 </tr>
                 @endforeach
               </table>    
         </div>
         <div class="add">
-        <a class="addbtn" href="add-farmer">Add Farmer</a>
+        <a class="addbtn" href="#">Add Delivery</a>
         </div>
         <div class="footer"></div>
     </div>

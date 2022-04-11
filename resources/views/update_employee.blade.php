@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Farmer</title>
+    <title>Update Employee</title>
     <link rel="stylesheet" href="{{ asset('css/add-farmer.css') }}">
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css"> 
 </head>
@@ -23,38 +23,41 @@
             {{-- <a class="nav-btn" href="#">Settings</a> --}}
         </div>
         <div class="reg-form">
-            <div class="title">Add Farmers</div>
+            <div class="title">Update Employee</div>
         <div class="content">
-          <form action="add-farmer" method="POST">
+          <form action="/update" method="POST">
             @csrf
+            <input type="hidden" name="id" value="{{ $data['id'] }}">
             <div class="user-details">
               <div class="input-box">
-                <span class="details">Serial-No:</span>
-                <input type="text" name="serial_no" placeholder="Enter the number" required>
+                <span class="details">Name</span>
+                <input type="text" name="name" placeholder="Enter the name" value="{{ $data['name'] }}" required>
               </div>
               {{-- <div class="input-box">
                 <span class="details">Id-No:</span>
                 <input type="text" name="id" placeholder="Enter ID" required>
               </div> --}}
               <div class="input-box">
-                <span class="details">Name of Farmer:</span>
-                <input type="text" name="name" placeholder="Enter the name" required>
+                <span class="details">Email</span>
+                <input type="text" name="email" placeholder="Enter the email"
+                 value="{{ $data['email'] }}" required>
               </div>
               <div class="input-box">
-                <span class="details">Locality of Farmer:</span>
-                <input type="text" name="locality" placeholder="Area" required>
+                <span class="details">Phone</span>
+                <input type="text" name="phone" placeholder="Enter phone number" 
+                value="{{ $data['phone'] }}" required>
               </div>
               <div class="input-box">
-                <span class="details">Farmer's A/C NO:</span>
-                <input type="text" name="farmers_account" placeholder="Bank account number" required>
+                <span class="details">Role</span>
+                <input type="text" name="role" placeholder="Enter the role" value="{{ $data['role'] }}" required>
               </div>
-              <div class="input-box">
+              {{-- <div class="input-box">
                 <span class="details">Farmer's Phone NO:</span>
-                <input type="text" name="farmers_phone" placeholder="Phone number" required>
-              </div>
+                <input type="text" name="farmers_phone" placeholder="Phone number" value="{{ $data['farmers_phone'] }}" required>
+              </div> --}}
             </div>
             <div class="button">
-              <input type="submit" value="Add Farmer">
+              <input type="submit" value="Update">
             </div>
           </form>
         </div>

@@ -30,7 +30,7 @@ body{
     grid-column: 1 / -1;
 }
 .table-content{
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     margin: 25px 0;
     font-size: 0.9em;
     margin-left: auto;
@@ -43,13 +43,13 @@ body{
     height: 40px;
 }
 th, td{
-    border: 1px solid black;
+    border: 1px double black;
     text-align: center;
     height: 30px;
     padding: 5px;
 }
 tr:hover{
-    background-color: blue;
+    background-color: rgb(39, 86, 255);
 }
 .table-btn{
     background-color: orange;
@@ -131,8 +131,8 @@ tr:hover{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
     border-radius: 5px;
     height: 30px;
     line-height: 30px;
@@ -148,4 +148,16 @@ tr:hover{
     grid-column: 1 / -1;
     height: 50px;
     margin-top: 100px;
+}
+
+.btn-logout{
+    position: absolute;
+    right: 30px;
+    top: 35px;
+}
+.logout{
+    color: #ff5b49;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: large;
 }

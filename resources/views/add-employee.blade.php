@@ -23,38 +23,38 @@
             {{-- <a class="nav-btn" href="#">Settings</a> --}}
         </div>
         <div class="reg-form">
-            <div class="title">Add Farmers</div>
+            <div class="title">Add Employee</div>
         <div class="content">
-          <form action="add-farmer" method="POST">
+          <form action="add-employee" method="POST">
             @csrf
             <div class="user-details">
               <div class="input-box">
-                <span class="details">Serial-No:</span>
-                <input type="text" name="serial_no" placeholder="Enter the number" required>
+                <span class="details">Name</span>
+                <input type="text" name="name" placeholder="Enter The Name" required>
               </div>
               {{-- <div class="input-box">
                 <span class="details">Id-No:</span>
                 <input type="text" name="id" placeholder="Enter ID" required>
               </div> --}}
+              {{-- <div class="input-box">
+                <span class="details">Id:</span>
+                <input type="text" name="id" placeholder="Enter the name" required>
+              </div> --}}
               <div class="input-box">
-                <span class="details">Name of Farmer:</span>
-                <input type="text" name="name" placeholder="Enter the name" required>
+                <span class="details">Email</span>
+                <input type="text" name="email" placeholder="Enter The Email" required>
               </div>
               <div class="input-box">
-                <span class="details">Locality of Farmer:</span>
-                <input type="text" name="locality" placeholder="Area" required>
+                <span class="details">Phone</span>
+                <input type="text" name="phone" placeholder="Enter The Phone Number" required>
               </div>
               <div class="input-box">
-                <span class="details">Farmer's A/C NO:</span>
-                <input type="text" name="farmers_account" placeholder="Bank account number" required>
-              </div>
-              <div class="input-box">
-                <span class="details">Farmer's Phone NO:</span>
-                <input type="text" name="farmers_phone" placeholder="Phone number" required>
+                <span class="details">Role</span>
+                <input type="text" name="role" placeholder="Enter The Role" required>
               </div>
             </div>
             <div class="button">
-              <input type="submit" value="Add Farmer">
+              <input type="submit" value="Add Employee">
             </div>
           </form>
         </div>

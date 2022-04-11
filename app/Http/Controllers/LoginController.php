@@ -16,9 +16,9 @@ class LoginController extends Controller
 
         if(Auth::attempt($userInfo)){
 
-          return redirect('/farmer-list');
+         return redirect('/farmer-list');
 
-          // return redirect()->route('farmer-list')->with('message','Login successful.');
+          //return redirect()->route('farmers')->with('message','Login successful.');
         }
         
          return redirect()->back()->with('error','Invalid user credentials');
